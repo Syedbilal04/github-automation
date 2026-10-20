@@ -33,7 +33,8 @@ jobs:
           git diff --cached --quiet && exit 0
 
           git commit -m "Update hourly activity log"
-          git push
+          git pull --rebase origin main
+          git push origin HEAD:main
 
 
 
